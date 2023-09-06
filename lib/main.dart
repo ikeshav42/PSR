@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:learning/postsubmit.dart';
 import 'welcome.dart';
 import 'typeselection.dart';
 import 'welcomebw.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: UserHomePageBW(username: 'Keshav S', email: "ikeshav42@gmail.com"),
+      home: WelcomeBW(),
     );
   }
 }
