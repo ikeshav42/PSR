@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'postform.dart';
 
 class Imagepick extends StatefulWidget {
   @override
@@ -19,6 +20,12 @@ class _MyHomePageState extends State<Imagepick> {
       setState(() {
         _selectedImage = File(pickedImage.path);
       });
+      // Navigate to Postform screen
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => Postform(imageFile: _selectedImage),
+        ),
+      );
     }
   }
 
@@ -29,6 +36,12 @@ class _MyHomePageState extends State<Imagepick> {
       setState(() {
         _selectedImage = File(takenImage.path);
       });
+      // Navigate to Postform screen
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => Postform(imageFile: _selectedImage),
+        ),
+      );
     }
   }
 
@@ -42,7 +55,7 @@ class _MyHomePageState extends State<Imagepick> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children:[
+          children: [
             SizedBox(
               child: SvgPicture.asset(
                 'assets/pic.svg',
@@ -84,12 +97,13 @@ class _MyHomePageState extends State<Imagepick> {
               ),
             ),
             const SizedBox(height: 20),
-            if (_selectedImage != null) // DO IMAGE ACTION HERE
-              Image.file(
-                _selectedImage!,
-                width: 200,
-                height: 200,
-              ),
+            // if (_selectedImage != null)
+              // Image.file(
+              //   _selectedImage!,
+              //   width: 200,
+              //   height: 200,
+              // ),
+              // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Postform()));
           ],
         ),
       ),
