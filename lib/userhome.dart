@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'samplecam.dart';
 
 class UserHomePageBW extends StatelessWidget {
-  final String username; // The username obtained after login
+  final String username; 
   final String email;
 
   const UserHomePageBW({required this.username, required this.email});
@@ -49,12 +50,12 @@ class UserHomePageBW extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                //navigation logic here
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Imagepick()));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.black,
-                fixedSize: Size(200, 45),
+                fixedSize: const Size(200, 45),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
@@ -70,12 +71,12 @@ class UserHomePageBW extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-// navigation logic here
+                
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.black,
-                fixedSize: Size(200, 45),
+                fixedSize: const Size(200, 45),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
@@ -96,7 +97,7 @@ class UserHomePageBW extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.black,
-                fixedSize: Size(200, 45),
+                fixedSize: const Size(200, 45),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),

@@ -44,14 +44,17 @@ class _LoginFormBWState extends State<LoginFormBW> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: 100,
-              ),
+              // const SizedBox(
+              //   height: 100,
+              // ),
               SizedBox(
                 child: SvgPicture.asset(
                   'assets/Admin-bro.svg',

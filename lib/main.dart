@@ -5,6 +5,7 @@ import 'typeselection.dart';
 import 'welcomebw.dart';
 import 'adminform.dart';
 import 'userhome.dart';
+import 'samplecam.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: WelcomeBW(),
+      home: UserHomePageBW(username: 'Keshav', email: 'abc@gmail.com',),
+      // home: WelcomeBW(),
     );
   }
 }
