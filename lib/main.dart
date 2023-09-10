@@ -6,6 +6,7 @@ import 'welcomebw.dart';
 import 'adminform.dart';
 import 'userhome.dart';
 import 'samplecam.dart';
+import 'adminlanding.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: UserHomePageBW(username: 'Keshav', email: 'abc@gmail.com',),
+      home: 
+      AdminLand(username: 'Keshav',email: 'ikeshav42@gmail.com',)
+      // UserHomePageBW(username: 'Keshav', email: 'abc@gmail.com',),
       // home: WelcomeBW(),
     );
   }
