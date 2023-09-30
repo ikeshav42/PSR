@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning/postform.dart';
 // import 'package:learning/postsubmit.dart';
 import 'welcome.dart';
 import 'typeselection.dart';
@@ -7,6 +8,7 @@ import 'adminform.dart';
 import 'userhome.dart';
 import 'samplecam.dart';
 import 'adminlanding.dart';
+import 'aland.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,12 +17,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: 
-      AdminLand(username: 'Keshav',email: 'ikeshav42@gmail.com',)
-      // UserHomePageBW(username: 'Keshav', email: 'abc@gmail.com',),
-      // home: WelcomeBW(),
-    );
+      LandingPage(username: 'Keshav', email: 'ikeshav42@gmail.com', resolvedCount: 147,unresolvedCount: 83,));
+      // Postform());
   }
 }
 
